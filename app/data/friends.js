@@ -1,7 +1,8 @@
-var friendsArray = [{
+var friendsArray = [
+    {
     name: "John",
     photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/john.jpeg",
-    "scores":[
+    scores:[
         "5",
         "2",
         "5",
@@ -16,7 +17,7 @@ var friendsArray = [{
 },{
     name: "Ringo",
     photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/ringo.jpeg",
-    "scores":[
+    scores:[
         "5",
         "1",
         "3",
@@ -31,7 +32,7 @@ var friendsArray = [{
 },{
     name: "Paul",
     photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/paul.jpeg",
-    "scores":[
+    scores:[
         "2",
         "1",
         "4",
@@ -46,7 +47,7 @@ var friendsArray = [{
 },{
     name: "George",
     photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/george.jpeg",
-    "scores":[
+    scores:[
         "4",
         "1",
         "3",
@@ -61,7 +62,7 @@ var friendsArray = [{
 },{
     name: "Brad Pitt",
     photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/brad.jpeg",
-    "scores":[
+    scores:[
         "5",
         "1",
         "4",
@@ -76,7 +77,7 @@ var friendsArray = [{
 },{
 name: "Mark Zuckerberg",
     photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/mark.jpg",
-    "scores":[
+    scores:[
         "5",
         "1",
         "4",
@@ -91,7 +92,7 @@ name: "Mark Zuckerberg",
 },{
     name: "Mark",
     photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/mark.jpeg",
-    "scores":[
+    scores:[
         "2",
         "1",
         "3",
@@ -106,7 +107,7 @@ name: "Mark Zuckerberg",
 },{
     name: "Bill",
     photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/bill.jpeg",
-    "scores":[
+    scores:[
         "2",
         "3",
         "3",
@@ -121,7 +122,7 @@ name: "Mark Zuckerberg",
 },{
     name: "Nikolai",
     photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/tesla.jpeg",
-    "scores":[
+    scores:[
         "5",
         "2",
         "4",

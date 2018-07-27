@@ -9,14 +9,14 @@ module.exports = function(app) {
         res.json(friendsArray)
     });
 
-app.post('/api/Allfriends',function(req,res){
+app.post('/api/AllFriends',function(req,res){
     var friendsScores = req.body.scores;
     var scoresArray = [];
     var bestMatch =0;
 
     for(var i=0;i<friendsArray.length;i++){
         var scoresDiff = 0;
-
+         
         for(var k=0;k<friendsScores.length;k++){
             scoresDiff += (Math.abs(parseInt(friendsArray[i].scores[k]) - parseInt(friendsScores[k])));   
         }
@@ -46,12 +46,6 @@ res.json(bestResult);
 //pushes the new submission into the friendsArray
 friendsArray.push(req.body);
 
-  //return bestMatch data
-//   var bff = friendList[bestMatch];
-//   res.json(bff);
-
-  //pushes new submission into the friendsList array
-//   friendList.push(req.body);
 
 });
 };

@@ -12,12 +12,11 @@ var PORT = process.env.PORT || 3000;
 
 // require("./routing/apiRoutes")(app);
 // require("./routing/htmlRoutes")(app);
-var apiRoutes = require('./routing/apiRoutes.js');
-var htmlRoutes = require('./routing/htmlRoutes.js');
+var apiRoutes = require('./app/routing/apiRoutes.js');
+var htmlRoutes = require('./app/routing/htmlRoutes.js');
 
-app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-
+app.use(bodyParser.urlencoded({extended: true}));
 
 
 //cors
