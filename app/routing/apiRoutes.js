@@ -5,11 +5,11 @@ A POST routes /api/friends. This will be used to handle incoming survey results.
 var friendsArray = require("../data/friends.js");
 
 module.exports = function(app) {
-    app.get("/api/getAllFriends", (req, res) => { 
+    app.get("/api/AllFriends", (req, res) => { 
         res.json(friendsArray)
     });
 
-app.post('/api/friends',function(req,res){
+app.post('/api/Allfriends',function(req,res){
     var friendsScores = req.body.scores;
     var scoresArray = [];
     var bestMatch =0;
