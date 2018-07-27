@@ -7,7 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Survey</title>
   </head>
   <style>
@@ -225,17 +227,71 @@
     <div class="modal-content">
       <h4>Your Match</h4>
       <h5 id="matchName"></h5>
-      <img id="matchFriend" src="" alt="No Image" width = 250px>
+      <img id="matchPhoto" src="" alt="No Image" width = 250px>
     </div>
   <div class="modal-footer">
     <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
   </div>
 </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    $("#submit").on("click",function(e){
+        e.preventDefault();
+
+        function validateForm(){
+            var isValid = true;
+
+            //looping to the two class form-control (name and photo).
+            $(".form-control").each(function(){
+                if($(this).val()===""){
+                    isValid = false;
+                }
+            });
+            //validating the question select options looping thru each one of select
+            $(".form-class").each(function(){
+                if($(this).val()===""){
+                    isValid = false;
+                }
+            });
+            // call back the isValid variable.
+            return isValid;
+
+        }
+        if(validateForm){
+            var friendsData = {
+                name: $("#name").val().trim(),
+                photo: $("#photoImage").val().trim(),
+                score: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val(),
+                ]
+            };
+            $.ajax({
+                method:'POST',
+                url:'api/friends',
+                headers:{
+                    "Accept": "application/json",
+				"Content-Type": "application/json"
+                },
+                data: JSON.stringify(friendsData)
+            }).then(function(response){
+                $('#matchName').text(response.name);
+                $("#matchPhoto").attr("src",response.photo);
+
+            });
+        }
+    });
+
+</script>
+    
+
   </body>
 </html>
