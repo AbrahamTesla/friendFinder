@@ -1,6 +1,6 @@
 var friendsArray = [{
     name: "John",
-    photo: "",
+    photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/john.jpeg",
     "scores":[
         5,
         2,
@@ -15,7 +15,7 @@ var friendsArray = [{
     ]
 },{
     name: "Ringo",
-    photo: "",
+    photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/ringo.jpeg",
     "scores":[
         5,
         1,
@@ -30,7 +30,7 @@ var friendsArray = [{
     ]
 },{
     name: "Paul",
-    photo: "",
+    photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/paul.jpeg",
     "scores":[
         2,
         1,
@@ -45,7 +45,7 @@ var friendsArray = [{
     ]
 },{
     name: "George",
-    photo: "",
+    photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/george.jpeg",
     "scores":[
         4,
         1,
@@ -60,7 +60,7 @@ var friendsArray = [{
     ]
 },{
     name: "Brad Pitt",
-    photo: "",
+    photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/brad.jpeg",
     "scores":[
         5,
         1,
@@ -74,8 +74,8 @@ var friendsArray = [{
         1
     ]
 },{
-name: "Brad Pitt",
-    photo: "",
+name: "Mark Zuckerberg",
+    photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/mark.jpg",
     "scores":[
         5,
         1,
@@ -90,7 +90,7 @@ name: "Brad Pitt",
     ]
 },{
     name: "Mark",
-    photo: "",
+    photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/mark.jpeg",
     "scores":[
         2,
         1,
@@ -104,8 +104,8 @@ name: "Brad Pitt",
         1
     ]
 },{
-    name: "John",
-    photo: "",
+    name: "Bill",
+    photo: "https://abrahamtesla.github.io/friendFinder/app/public/images/bill.jpeg",
     "scores":[
         2,
         3,
@@ -120,7 +120,7 @@ name: "Brad Pitt",
     ]
 },{
     name: "Nikolai",
-    photo: "",
+    photo: "https://abrahamtesla.github.io/",
     "scores":[
         5,
         2,
