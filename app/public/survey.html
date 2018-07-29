@@ -211,9 +211,10 @@
                   </div>
             </section>   
         </section>
-
+        <!-- data-toggle="modal" -->
+        <!-- data-target="#resultsModal" -->
         </br> 
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resultsModal">
+        <button type="button" class="btn btn-primary" id="submit">
                 Submit
         </button>
         <!-- <button type="button" class="btn btn-success" id="submit">Submit</button> -->
@@ -256,7 +257,7 @@
         </div>
       </div>
 <script>
-$(document).ready(function(){
+// $(document).ready(function(){
 
 
     $("#submit").on("click",function(e){
@@ -281,7 +282,8 @@ $(document).ready(function(){
             return isValid;
 
         }
-        if(validateForm){
+        if(validateForm()==true){
+            
             var friendsData = {
                 name: $("#name").val().trim(),
                 photo: $("#photoImage").val().trim(),
@@ -295,9 +297,10 @@ $(document).ready(function(){
                     $("#q7").val(),
                     $("#q8").val(),
                     $("#q9").val(),
-                    $("#q10").val(),
+                    $("#q10").val()
                 ]
             };
+            // console.log(friendsData);
             $.ajax({
                 method:'POST',
                 url:'/api/AllFriends',
@@ -314,8 +317,11 @@ $(document).ready(function(){
 
             });
         }
+        else{
+            console.log("someting else")
+        }
     });
-});
+// });
 
 </script>
     
